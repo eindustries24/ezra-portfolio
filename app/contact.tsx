@@ -2,7 +2,7 @@
 import { useForm, ValidationError } from "@formspree/react";
 
 export default function Contact() {
-  const [state, handleSubmit] = useForm("NEXT_PUBLIC_FORM");
+  const [state, handleSubmit] = useForm("xqeeeolp");
 
   if (state.succeeded) {
     return <p>Thanks for your submission!</p>;
@@ -61,20 +61,6 @@ export default function Contact() {
         </button>
         <ValidationError errors={state.errors} />
       </form>
-      {/* <form onSubmit={handleSubmit}>
-        <input name="name" placeholder="Name" />
-
-        <input name="email" type="email" placeholder="Email" required />
-
-        <textarea name="message" placeholder="Message" required />
-
-        <button type="submit" disabled={status === "loading"}>
-          Send
-        </button>
-
-        {status === "success" && <p>Message sent!</p>}
-        {status === "error" && <p>Something went wrong.</p>}
-      </form>{" "} */}
     </div>
   );
 }
